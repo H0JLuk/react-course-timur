@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkulbi_course=self.webpackChunkulbi_course||[]).push([[179],{607:(e,s,o)=>{(0,o(127).someFn)()},127:(e,s)=>{Object.defineProperty(s,"__esModule",{value:!0}),s.someFn=void 0,s.someFn=function(){console.log(1356)}}},e=>{e(e.s=607)}]);
