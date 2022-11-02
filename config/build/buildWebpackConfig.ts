@@ -15,19 +15,17 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
     mode: mode,
     entry: paths.entry,
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     resolve: buildResolvers(),
     output: {
-      filename: '[name].[hash].js',
+      filename: "[name].[contenthash].js",
+      // chunkFilename: '[name].bundle.js?h=[chunkhash]',
       path: paths.build,
       clean: true,
     },
     plugins: buildPlugins(options),
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev ? buildDevServer(options) : undefined,
-    optimization: {
-      runtimeChunk: 'single',
-    },  
   };
 }
